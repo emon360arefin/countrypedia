@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="country.js" defer></script>
+    <script src="test.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="h-20 bg-slate-100">
+        <div class="inner h-full lg:max-w-screen-xl max-w-2xl mx-auto flex items-center justify-center gap-4">
+            
+        </div>
+    </header>
+    <main>
+        <section class="bg-blue-100 h-auto pb-4 fixed top-0 left-0 right-0">
+            <div class="bg-slate-400 flex justify-center">
+                <img src="./Logo.png" class="w-52" alt="">
+            </div>
+            <div class="inner px-2 lg:max-w-screen-xl pt-4 max-w-2xl mx-auto">
+                <div class="input-container flex gap-2 items-center justify-between">
+                    <div class="region-input">
+                        <label class=" py-px" for="select-region">Select Countries By Region <span id="region-number"
+                                class="py-px px-2 ml-6 text-white rounded border-2 border-slate-400 bg-slate-400"></span>
+                        </label>
+                        <select name="region" id="select-region"
+                            class="w-32 border-2 border-slate-400 rounded py-px px-2">
+                            <option value="all">All</option>
+                            <option value="region/asia">Asia</option>
+                            <option value="region/europe">Europe</option>
+                            <option value="region/america">America</option>
+                            <option value="region/africa">Africa</option>
+                            <option value="region/Oceania">Oceania</option>
+                            
+                        </select>
+                    </div>
+                    <div class="population-input border-black">
+                        <label class="py-px" for="select-population">Select Countries By Population <span
+                                id="population-number"
+                                class="py-px px-2 ml-6 text-white rounded border-2 border-slate-400 bg-slate-400"></span></label>
+                        <select name="population" id="select-population"
+                            class="w-46 border-2 border-slate-400 rounded py-px px-2">
+                            <option value="0">All</option>
+                            <option value="100">At least 100</option>
+                            <option value="100000">At least 100K</option>
+                            <option value="500000">At least 500K</option>
+                            <option value="1000000">At least 1M</option>
+                            <option value="10000000">At least 10M</option>
+                            <option value="100000000">At least 100M</option>
+                            <option value="1000000000">At least 1B</option>
+                        </select>
+                    </div>
+
+        
+                </div>
+            </div>
+        </section>
+        <section class="bg-slate-100 h-full py-36 ">
+            <div class="inner px-2 lg:max-w-screen-xl max-w-2xl mx-auto">
+                <div class="content-container  mt-6">
+                    <div class="country-container grid grid-cols-2 lg:grid-cols-4 gap-6 ">
+                        <div class="card-container  p-2 shadow bg-green-100 rounded-lg">
+                            <div class="card bg-green-300 shadow">
+                                <img class="rounded-md" src="https://flagcdn.com/w320/pt.png" alt="">
+                                <div class="grid grid-cols-2 gap-2 mt-2">
+                                    <h3 class="py-px text-white px-4 bg-blue-300 rounded">REGION</h3>
+                                    <h3 class="py-px text-white px-4 bg-blue-300 rounded">Language</h3>
+                                </div>
+                                <h2 class="name mt-2 text-xl h-16 font-semibold">Country:Lorem Ipsum </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Modal Section -->
+        <section id="h-screen">
+            <div id="modal-container">
+                <div id="modal" class="modal h-screen bg-gradient-to-t from-indigo-200 to-transparent flex items-center justify-center fixed top-0 left-0 right-0 hidden">
+                    <div class="inner  relative p-4">
+                        <div class="card p-6 shadow bg-slate-100 rounded-lg flex flex-row gap-4">
+                            <div class="">
+                                <img id="flag" class="rounded-md w-auto h-40" src="https://flagcdn.com/w320/bn.png" alt="">  
+                            </div>
+                            <div class="">
+                                <h2 id="country" class="name text-xl font-semibold"> </h2>
+                                <h2 id="capital" class="capital text-xl font-semibold mt-2 ">Capital: </h2>
+                                <h2 id="continent" class="continent text-xl font-semibold mt-2">Continent: </h2>
+                                <h2 id="language" class="language text-xl font-semibold mt-2">Language: ${language[0]} </h2>
+                                <h2 id="population" class="population text-xl font-semibold mt-2">Population: ${pop} </h2>
+                            </div>
+                        </div>
+            
+                        <!-- Closing Button -->
+                        <button id="modal-close" onclick="closeModal()" class="text-xl  hover:rotate-45  duration-300 ease-in-out bg-red-400 hover:bg-red-500 py-1 px-3 rounded-full  absolute z-20 top-1 right-2 text-slate-100"><i
+                            class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        
+
+
+        
+    </main>
+
+
+</body>
+
+</html>

@@ -15,7 +15,7 @@
 <body>
     <header class="h-20 bg-slate-100">
         <div class="inner h-full lg:max-w-screen-xl max-w-2xl mx-auto flex items-center justify-center gap-4">
-            
+
         </div>
     </header>
     <main>
@@ -37,7 +37,7 @@
                             <option value="region/america">America</option>
                             <option value="region/africa">Africa</option>
                             <option value="region/Oceania">Oceania</option>
-                            
+
                         </select>
                     </div>
                     <div class="population-input border-black">
@@ -57,7 +57,7 @@
                         </select>
                     </div>
 
-        
+
                 </div>
             </div>
         </section>
@@ -82,36 +82,35 @@
 
 
         <!-- Modal Section -->
-        <section id="h-screen">
-            <div id="modal-container">
-                <div id="modal" class="modal h-screen bg-gradient-to-t from-indigo-200 to-transparent flex items-center justify-center fixed top-0 left-0 right-0 hidden">
+        <section id="A" >
+            <div id="modal-container" >
+                <div id="modal" onclick="hideDiv(event)"
+                    class="modal h-screen bg-gradient-to-t from-indigo-200 to-transparent flex items-center justify-center fixed top-0 left-0 right-0 hidden">
                     <div class="inner  relative p-4">
                         <div class="card p-6 shadow bg-slate-100 rounded-lg flex flex-row gap-4">
                             <div class="">
-                                <img id="flag" class="rounded-md w-auto h-40" src="" alt="">  
+                                <img id="flag" class="rounded-md w-auto h-40" src="" alt="">
                             </div>
                             <div class="">
                                 <h2 id="country" class="name text-xl font-semibold"> </h2>
                                 <h2 id="capital" class="capital text-xl font-semibold mt-2 ">Capital: </h2>
                                 <h2 id="continent" class="continent text-xl font-semibold mt-2">Continent: </h2>
-                                <h2 id="language" class="language text-xl font-semibold mt-2">Language: ${language[0]} </h2>
-                                <h2 id="population" class="population text-xl font-semibold mt-2">Population: ${pop} </h2>
+                                <h2 id="language" class="language text-xl font-semibold mt-2">Language: ${language[0]}
+                                </h2>
+                                <h2 id="population" class="population text-xl font-semibold mt-2">Population: ${pop}
+                                </h2>
                             </div>
                         </div>
-            
+
                         <!-- Closing Button -->
-                        <button id="modal-close" onclick="closeModal()" class="text-xl  hover:rotate-45  duration-300 ease-in-out bg-red-400 hover:bg-red-500 py-1 px-3 rounded-full  absolute z-20 top-1 right-2 text-slate-100"><i
-                            class="fa-solid fa-xmark"></i></button>
+                        <button id="modal-close" onclick="closeModal()"
+                            class="text-xl  hover:rotate-45  duration-300 ease-in-out bg-red-400 hover:bg-red-500 py-1 px-3 rounded-full  absolute z-20 top-1 right-2 text-slate-100"><i
+                                class="fa-solid fa-xmark"></i></button>
                     </div>
                 </div>
-                
+
             </div>
         </section>
-
-        
-
-
-        
     </main>
 
 

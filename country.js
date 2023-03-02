@@ -154,10 +154,19 @@ document.getElementById('select-population').addEventListener('change', function
 })
 
 
-
 const closeModal = () => {
     const modal = document.querySelectorAll('.modal');
     modal.forEach(singleModal => singleModal.classList.toggle('hidden'));
+}
+
+function hideDiv(event) {
+
+    var clickedElement = event.target;
+
+    if (clickedElement.id == "modal") {
+        clickedElement.classList.toggle('hidden');
+    }
+    
 }
 
 

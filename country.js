@@ -100,7 +100,8 @@ const displayModal = (desh, j) => {
     console.log(desh[j]);
     const modal = document.getElementById('modal');
     
-
+    const flag = document.getElementById('flag');
+    flag.src = `${desh[j].flags.png}`;
 
     const country = document.getElementById('country');
     country.innerHTML = `
